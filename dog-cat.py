@@ -15,16 +15,16 @@ valid_data_dir = 'data/validation'
 datagen = ImageDataGenerator(rescale = 1./255)
 
 train_generator = datagen.flow_from_directory(directory=train_data_dir,
-											   target_size=(img_width,img_height),
-											   classes=['dogs','cats'],
-											   class_mode='binary',
-											   batch_size=16)
+					target_size=(img_width,img_height),
+					classes=['dogs','cats'],
+					class_mode='binary',
+					batch_size=16)
 
 validation_generator = datagen.flow_from_directory(directory=valid_data_dir,
-											   target_size=(img_width,img_height),
-											   classes=['dogs','cats'],
-											   class_mode='binary',
-											   batch_size=32)
+					target_size=(img_width,img_height),
+					classes=['dogs','cats'],
+					class_mode='binary',
+					batch_size=32)
 
 
 # step-2 : build model
